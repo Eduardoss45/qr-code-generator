@@ -1,0 +1,98 @@
+/* Estilos gerais */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #34db7a; /* Cor de fundo verde */
+}
+
+/* Container principal */
+.container {
+  background-color: #fff; /* Cor de fundo branca */
+  height: 260px; /* Altura inicial do container */
+  width: 400px; /* Largura do container */
+  border-radius: 10px; /* Bordas arredondadas */
+  padding: 20px; /* Espaçamento interno */
+  transition: 0.2s; /* Transição suave de altura */
+}
+
+.container.active {
+  height: 500px; /* Altura aumentada do container quando ativo */
+}
+
+/* Cabeçalho */
+#qr-header {
+  text-align: center; /* Alinhamento centralizado do texto */
+}
+
+#qr-header h1 {
+  font-size: 1.8rem; /* Tamanho da fonte do título */
+  font-weight: 700; /* Peso da fonte (negrito) */
+  margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+#qr-header p {
+  color: #444; /* Cor do texto do parágrafo */
+  font-size: 0.9rem; /* Tamanho da fonte do parágrafo */
+}
+
+/* Formulário QR Code */
+.container #qr-form {
+  margin: 20px 15px; /* Espaçamento externo */
+}
+
+#qr-form input,
+#qr-form button {
+  width: 100%; /* Largura total */
+  height: 55px; /* Altura dos elementos */
+  border: none; /* Sem borda */
+  border-radius: 5px; /* Bordas arredondadas */
+  outline: none; /* Sem contorno ao focar */
+  font-size: 0.9rem; /* Tamanho da fonte */
+}
+
+#qr-form input {
+  border: 1px solid #777; /* Borda sólida cinza */
+  padding: 10px 15px; /* Espaçamento interno */
+}
+
+#qr-form button {
+  background-color: #086824; /* Cor de fundo verde escuro */
+  margin-top: 20px; /* Espaçamento superior */
+  color: #fff; /* Cor do texto (branco) */
+  font-size: 1.2rem; /* Tamanho da fonte */
+  cursor: pointer; /* Cursor de ponteiro ao passar */
+  opacity: 0.9; /* Opacidade inicial */
+  transition: 0.4s; /* Transição suave */
+}
+
+#qr-form button:hover {
+  opacity: 1; /* Opacidade total ao passar o mouse */
+}
+
+/* QR Code */
+.container #qr-code {
+  display: flex; /* Exibição flexível */
+  opacity: 0; /* Opacidade inicial */
+  pointer-events: none; /* Sem eventos de ponteiro */
+  border: 1px solid #ccc; /* Borda sólida cinza */
+  padding: 30px 0; /* Espaçamento interno */
+  margin: 20px 15px; /* Espaçamento externo */
+  display: flex; /* Exibição flexível */
+  align-items: center; /* Alinhamento vertical */
+  justify-content: center; /* Alinhamento horizontal */
+}
+
+.container.active #qr-code {
+  opacity: 1; /* Opacidade total */
+  pointer-events: auto; /* Eventos de ponteiro ativados */
+  transition: 0.5s; /* Transição suave */
+}
